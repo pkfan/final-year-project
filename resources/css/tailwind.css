@@ -1,0 +1,825 @@
+:root {
+    --primary: #270082;
+    --secondary: #7A0BC0;
+    --secondary-2: #0085FF;
+    --ternary: #FFC600;
+    
+    --red: #EA0000;
+    --green: #11D800;
+    --yellow: #FFC600;
+
+    --white: #ffffff;
+    --black: #000000;
+    /* gray-100 */
+    --gray-1: rgb(243,244,246); 
+    /* gray-200 */
+    --gray-2: rgb(229,231,235);
+    /* gray-300 */
+    --gray-3:rgb(209,213,219);
+
+    /* gray-500 */
+    --gray-5:rgb(107,114,128);
+}
+
+@tailwind base;
+@layer base{
+  html {
+    scroll-behavior: smooth;
+    }
+  h1{
+      @apply text-4xl font-black black;
+  }
+
+  h2{
+      @apply text-2xl font-black black;
+  }
+  h3{
+      @apply text-xl font-black black;
+  }
+  h4{
+      @apply text-lg font-black black;
+  }
+
+ p{
+     @apply black;
+ }
+ span{
+     @apply black;
+ }
+ div{
+     @apply black;
+ }
+}
+
+
+/************* COMPONENTS *************/
+@tailwind components;
+@layer components{
+
+}
+
+@tailwind utilities;
+@layer utilities{
+    .overlay{
+        @apply z-30 absolute w-screen h-screen opacity-0;
+    }
+
+    .dashboard-sidebar-active{
+        @apply !bg-black text-white;
+    }
+/************ custom colors with css variable *******/
+ /****  BACKGROUND COLORS VARIABLE ****/
+    .background-gray-1{
+        background-color: var( --gray-1);
+    }
+    .background-gray-2{
+        background-color: var( --gray-2);
+    }
+    .background-gray-3{
+        background-color: var( --gray-3);
+    }
+    .background-primary{
+        background-color: var( --primary);
+    }
+    .background-secondary{
+        background-color: var( --secondary);
+    }
+    .background-secondary-2{
+        background-color: var( --secondary-2);
+    }
+    .background-ternary{
+        background-color: var( --ternary);
+    }
+    .background-red{
+        background-color: var( --red);
+    }
+    .background-green{
+        background-color: var( --green);
+    }
+    .background-yellow{
+        background-color: var( --yellow);
+    }
+
+    .background-white{
+        background-color: var( --white);
+    }
+    .background-black{
+        background-color: var( --black);
+    }
+
+    .background-gray-900{
+        background-color: var( --gray-900);
+    }
+    .background-gray-800{
+        background-color: var( --gray-800);
+    }
+    .background-gray-700{
+        background-color: var( --gray-700);
+    }
+    .background-gray-600{
+        background-color: var( --gray-600);
+    }
+    .background-gray-500{
+        background-color: var( --gray-500);
+    }
+    .background-gray-400{
+        background-color: var( --gray-400);
+    }
+    .background-gray-300{
+        background-color: var( --gray-300);
+    }
+    .background-gray-200{
+        background-color: var( --gray-200);
+    }
+    .background-gray-100{
+        background-color: var( --gray-100);
+    }
+    .background-gray-50{
+        background-color: var( --gray-50);
+    }
+
+ /****  TEXT COLORS VARIABLE ****/
+    .primary{
+        color: var( --primary);
+    }
+    .secondary{
+        color: var( --secondary);
+    }
+    .secondary-2{
+        color: var( --secondary-2);
+    }
+    .ternary{
+        color: var( --ternary);
+    }
+    .red{
+        color: var( --red);
+    }
+    .green{
+        color: var( --green);
+    }
+    .yellow{
+        color: var( --yellow);
+    }
+
+    .white{
+        color: var( --white);
+    }
+    .black{
+        color: var( --black);
+    }
+
+    .gray-5{
+        color: var( --gray-5);
+    }
+
+    .gray-900{
+        color: var( --gray-900);
+    }
+    .gray-800{
+        color: var( --gray-800);
+    }
+    .gray-700{
+        color: var( --gray-700);
+    }
+    .gray-600{
+        color: var( --gray-600);
+    }
+    .gray-500{
+        color: var( --gray-500);
+    }
+    .gray-400{
+        color: var( --gray-400);
+    }
+    .gray-300{
+        color: var( --gray-300);
+    }
+    .gray-200{
+        color: var( --gray-200);
+    }
+    .gray-100{
+        color: var( --gray-100);
+    }
+    .gray-50{
+        color: var( --gray-50);
+    }
+
+
+ /****  svg fill COLORS VARIABLE ****/
+     .fill-primary{
+        fill: var( --primary);
+    }
+    .fill-secondary{
+        fill: var( --secondary);
+    }
+    .fill-secondary-2{
+        fill: var( --secondary-2);
+    }
+    .fill-ternary{
+        fill: var( --ternary);
+    }
+    .fill-red{
+        fill: var( --red);
+    }
+    .fill-yellow{
+        fill: var( --yellow);
+    }
+    .fill-green{
+        fill: var( --green);
+    }
+    .fill-black{
+        fill: var( --black);
+    }
+    .fill-white{
+        fill: var( --white);
+    }
+    .fill-gray-3{
+        fill: var( --gray-3);
+    }
+    .fill-gray-5{
+        fill: var( --gray-5);
+    }
+
+ /****  svg stroke COLORS VARIABLE ****/
+    .stroke-primary{
+        stroke: var( --primary);
+    }
+    .stroke-secondary{
+        stroke: var( --secondary);
+    }
+    .stroke-secondary-2{
+        stroke: var( --secondary-2);
+    }
+    .stroke-ternary{
+        stroke: var( --ternary);
+    }
+    .stroke-yellow{
+        stroke: var( --yellow);
+    }
+    .stroke-black{
+        stroke: var( --black);
+    }
+    .stroke-white{
+        stroke: var( --white);
+    }
+
+ /****  BORDER COLORS VARIABLE ****/
+    .border-primary{
+        border-color: var( --primary);
+    }
+    .border-secondary{
+        border-color: var( --secondary);
+    }
+    .border-secondary-2{
+        border-color: var( --secondary-2);
+    }
+    .border-ternary{
+        border-color: var( --ternary);
+    }
+    .border-red{
+        border-color: var( --red);
+    }
+    .border-green{
+        border-color: var( --green);
+    }
+    .border-yellow{
+        border-color: var( --yellow);
+    }
+
+    .border-white{
+        border-color: var( --white);
+    }
+    .border-black{
+        border-color: var( --black);
+    }
+
+    .border-gray-5{
+        border-color: var( --gray-5);
+    }
+    .border-gray-3{
+        border-color: var( --gray-3);
+    }
+    .border-gray-2{
+        border-color: rgb(137 137 137 / 49%);
+    }
+    .border-gray-1{
+        border-color: var( --gray-1);
+    }
+
+    .border-gray-900{
+        border-color: var( --gray-900);
+    }
+    .border-gray-800{
+        border-color: var( --gray-800);
+    }
+    .border-gray-700{
+        border-color: var( --gray-700);
+    }
+    .border-gray-600{
+        border-color: var( --gray-600);
+    }
+    .border-gray-500{
+        border-color: var( --gray-500);
+    }
+    .border-gray-400{
+        border-color: var( --gray-400);
+    }
+    .border-gray-300{
+        border-color: var( --gray-300);
+    }
+    .border-gray-200{
+        border-color: var( --gray-200);
+    }
+    .border-gray-100{
+        border-color: var( --gray-100);
+    }
+    .border-gray-50{
+        border-color: var( --gray-50);
+    }
+ /****  shadow VARIABLE ****/
+    .shadow-gray-3{
+        --tw-shadow-color: var( --gray-3);
+        --tw-shadow: var(--tw-shadow-colored);
+    }
+    
+
+ 
+ 
+ /*************** CUSTOM CSS OF TAILWIND ***********/
+.red-hover:hover{
+    @apply  red;
+}
+
+ /*******************************************
+ *******************************************
+ ***** NAVIGATION STYLES
+ ********************************************
+ ********************************************/
+    .checked-yellow{
+        @apply background-ternary;
+    }
+
+   /* nav > ul > li{
+        @apply relative ;
+    }
+    nav > ul > li:hover{
+        @apply opacity-80;
+    }
+    nav > ul > li::after{
+        content:" ";
+        @apply  absolute border-t-4 w-full -translate-x-[100%] top-full border-secondary scale-0 transition-all duration-300;
+    }
+    nav > ul > li:hover::after{
+        @apply scale-100 origin-left;
+    } */
+    /* category nav menu link */
+    #nav-category-icon ul li{
+        @apply transition-all duration-300;
+    }
+    #nav-category-icon ul li:hover{
+        @apply red translate-x-1;
+    }
+
+    /* nav avatar menu link for auth user */
+    #nav-avatar-menu li{
+        @apply transition-all duration-300;
+    }
+    #nav-avatar-menu li:hover{
+        @apply red translate-x-1;
+    }
+
+    .nav-menu{
+        /* @apply scale-100 tilt-in-top-1; */
+        /* @apply scale-100 bounce-in-top z-50; */
+        @apply scale-100 origin-top;
+        /* @apply scale-100 slit-in-horizontal; */
+        /* @apply scale-100 slide-in-bck-tl; */
+        /* @apply scale-100 swing-in-top-fwd; */
+    }
+
+    /* for button components */
+    .btn:hover{
+        @apply shake-bottom ;
+    }
+    .vertical-shake:hover{
+        @apply shake-bottom ;
+        @apply shake-vertical;
+    }
+
+    /*******************************************
+    *******************************************
+    ***** HOME PAGE STYLES
+    ********************************************
+    ********************************************/
+
+    /* tab section */
+    #tablet-section ul{
+        @apply gray-5 py-2 border-b-4 border-gray-3;
+    }
+    #tablet-section ul li{
+        @apply border-l border-gray-5 px-4 font-bold transition-all duration-300;
+    }
+    #tablet-section ul li:hover{
+        @apply secondary;
+    }
+   
+    
+    #tablet-section ul li:first-child{
+        @apply border-l-0 pl-0;
+    }
+    #tablet-section ul li button{
+        @apply font-bold translate-y-3 border-b-4 border-transparent pb-2;
+    }
+    #tablet-section ul li .active{
+        @apply secondary border-secondary;
+    }
+
+    /*******************************************
+    *******************************************
+    ***** PRODUCT PAGE STYLES
+    ********************************************
+    ********************************************/
+    /* tab section */
+    #productPage-tab-section ul{
+        @apply gray-5 py-2 border-b-4 border-gray-3;
+    }
+    #productPage-tab-section ul li{
+        @apply border-l border-gray-5 px-4 font-bold transition-all duration-300;
+    }
+    #productPage-tab-section ul li:hover{
+        @apply secondary;
+    }
+
+
+    #productPage-tab-section ul li:first-child{
+        @apply border-l-0 pl-0;
+    }
+    #productPage-tab-section ul li button{
+        @apply font-bold translate-y-3 border-b-4 border-transparent pb-2;
+    }
+    #productPage-tab-section ul li .active{
+        @apply secondary border-secondary;
+    }
+
+    /*******************************************
+    *******************************************
+    ***** FOOTER PAGE STYLES
+    ********************************************
+    ********************************************/
+
+    /* category nav menu link */
+    #footer section ul li{
+            @apply transition-all duration-300;
+        }
+    #footer section ul li:hover{
+            @apply red translate-x-1;
+    }
+
+    .shadow-top{
+        box-shadow: -5px -5px 20px var(--gray-5);
+    }
+
+}
+
+/*******************************************    
+*******************************************
+***** HOME PAGE STYLES SPLIDER
+********************************************
+********************************************/
+
+/* custom css styles */
+ /* splider custom styles */
+    .splide__arrow{
+        @apply background-white shadow-md shadow-gray-3 opacity-75;
+    }
+    .splide__arrow:hover{
+        @apply background-gray-2;
+    }
+
+    .splide__arrow svg{
+        @apply fill-black;
+    }
+    .splide__arrow--prev{
+        left:5%;
+
+    }
+    .splide__arrow--next{
+        right:5%;
+    }
+    .splide__pagination {
+        @apply bottom-16;
+    }
+    .splide__pagination__page {
+        border : 1px solid var(--secondary);
+        width: 10px;
+        height: 10px;
+    }
+    .splide__pagination__page.is-active{
+        background: var(--secondary)
+    }
+
+    #featured-slider > .splide__pagination{
+        @apply hidden;
+    }
+    #featured-slider .splide__arrow--prev{
+        left:0%;
+
+    }
+    #featured-slider .splide__arrow--next{
+        right:0%;
+    }
+    #featured-slider-track {
+    transform: translateX(-10px);
+    }
+    
+
+    #new-arrivals-slider > .splide__pagination{
+        @apply hidden;
+    }
+    #new-arrivals-slider .splide__arrow--prev{
+        left:0%;
+
+    }
+    #new-arrivals-slider .splide__arrow--next{
+        right:0%;
+    }
+    #new-arrivals-slider-track {
+    transform: translateX(-10px);
+    }
+
+
+    /*******************************************
+    *******************************************
+    ***** PRODUCT PAGE STYLES SPLIDER
+    ********************************************
+    ********************************************/
+
+    /* product slider styles start */
+ 
+    #product-slider .splide__slide img{
+            margin: 0 auto;
+        }
+    .thumbnails {
+    display: flex;
+    width: 100%;
+    
+    margin: 1rem auto 0;
+    padding: 0;
+    justify-content: center;
+    }
+
+    .thumbnail {
+    width: 100px;
+    height: 100px;
+    margin-left: 100px;
+    overflow: hidden;
+    list-style: none;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid var(--gray-5);
+    border-radius: 10px;
+    padding: 5px;
+    }
+
+    .thumbnail img {
+    width: 100%;
+    height: auto;
+    }
+
+    .thumbnail.is-active {
+    opacity: 1;
+    border: 3px solid var(--secondary);
+
+    }
+    /* product slider styles end */
+    /* product page related proeuct splider start */
+    #productPage-related-slider .splide__pagination{
+        @apply hidden;
+    }
+    #productPage-related-slider .splide__arrow--prev{
+        left:0%;
+
+    }
+    #productPage-related-slider .splide__arrow--next{
+        right:0%;
+    }
+    #productPage-related-slider-track {
+        transform: translateX(-10px);
+    }
+
+
+    /* product page related proeuct splider end */
+
+/*******************************************
+*******************************************
+***** ANIMISTA WEBSITE ANIMATION STYLES
+********************************************
+********************************************/
+/* animation from animista */
+
+ /* animation for drop down and navigation */
+    @keyframes tilt-in-top-1 {
+    0% {
+        transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateY(0deg) translateY(0) skewY(0deg);
+        opacity: 1;
+    }
+    }
+
+    .tilt-in-top-1 {
+        animation: tilt-in-top-1 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    @keyframes bounce-in-top {
+        0% {
+        transform: translateY(-500px);
+        animation-timing-function: ease-in;
+        opacity: 0;
+        }
+        38% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        opacity: 1;
+        }
+        55% {
+        transform: translateY(-65px);
+        animation-timing-function: ease-in;
+        }
+        72% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        }
+        81% {
+        transform: translateY(-28px);
+        animation-timing-function: ease-in;
+        }
+        90% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        }
+        95% {
+        transform: translateY(-8px);
+        animation-timing-function: ease-in;
+        }
+        100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        }
+    }
+    
+    
+    .bounce-in-top {
+        animation: bounce-in-top 1.1s both;
+    }
+    
+    @keyframes swing-in-top-fwd {
+        0% {
+        transform: rotateX(-100deg);
+        transform-origin: top;
+        opacity: 0;
+        }
+        100% {
+        transform: rotateX(0deg);
+        transform-origin: top;
+        opacity: 1;
+        }
+    }
+    
+    .swing-in-top-fwd {
+        animation: swing-in-top-fwd 1.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    }
+
+    @keyframes slit-in-horizontal {
+        0% {
+        transform: translateZ(-800px) rotateX(90deg);
+        opacity: 0;
+        }
+        54% {
+        transform: translateZ(-160px) rotateX(87deg);
+        opacity: 1;
+        }
+        100% {
+        transform: translateZ(0) rotateX(0);
+        }
+    }
+    
+
+    .slit-in-horizontal {
+        animation: slit-in-horizontal 0.45s ease-out both;
+    }
+
+    @keyframes slide-in-bck-tl {
+        0% {
+        transform: translateZ(700px) translateY(-300px) translateX(-400px);
+        opacity: 0;
+        }
+        100% {
+        transform: translateZ(0) translateY(0) translateX(0);
+        opacity: 1;
+        }
+    }
+
+    .slide-in-bck-tl {
+        animation: slide-in-bck-tl 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    /* animation for buttons */
+    @keyframes shake-vertical {
+        0%,
+        100% {
+        transform: translateY(0);
+        }
+        10%,
+        30%,
+        50%,
+        70% {
+        transform: translateY(-8px);
+        }
+        20%,
+        40%,
+        60% {
+        transform: translateY(8px);
+        }
+        80% {
+        transform: translateY(6.4px);
+        }
+        90% {
+        transform: translateY(-6.4px);
+        }
+    }
+    
+    .shake-vertical {
+        animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    }
+
+    @keyframes shake-lr {
+        0%,
+        100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+        }
+        10% {
+        transform: rotate(8deg);
+        }
+        20%,
+        40%,
+        60% {
+        transform: rotate(-10deg);
+        }
+        30%,
+        50%,
+        70% {
+        transform: rotate(10deg);
+        }
+        80% {
+        transform: rotate(-8deg);
+        }
+        90% {
+        transform: rotate(8deg);
+        }
+    }
+    
+    .shake-lr {
+        animation: shake-lr 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    }
+
+    @keyframes shake-bottom {
+        0%,
+        100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 100%;
+        }
+        10% {
+        transform: rotate(2deg);
+        }
+        20%,
+        40%,
+        60% {
+        transform: rotate(-4deg);
+        }
+        30%,
+        50%,
+        70% {
+        transform: rotate(4deg);
+        }
+        80% {
+        transform: rotate(-2deg);
+        }
+        90% {
+        transform: rotate(2deg);
+        }
+    }
+    
+
+    .shake-bottom {
+        animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    }
+
+
